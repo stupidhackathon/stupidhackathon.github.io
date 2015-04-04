@@ -1,0 +1,6 @@
+{
+  "name": "stupidhackathon.github.io",
+  "dependencies": {
+    "bootstrap.css": "~2.3.2"
+  }
+}
