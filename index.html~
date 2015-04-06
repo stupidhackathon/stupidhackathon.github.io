@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="bower_components/bootstrap.css/css/bootstrap.min.css" rel="stylesheet">
-    <link href="bower_components/bootstrap.css/css/bootstrap-responsive.min.css" rel="stylesheet">
 
     <style type="text/css">
       body {
-        padding-top: 30px;
-        padding-bottom: 80px;
+        padding-top: 60px;
+        padding-bottom: 600px;
       }
 
       .bcg {
@@ -43,7 +42,8 @@
         <h1>Stupid Shit No One Needs & Terrible Ideas Hackathon</h1>
         <h2>May 9-10, <a href="https://www.noisebridge.net/"><img src="images/noisebridge.png" width="30"/> Noisebridge</a>, San Francisco</h2>
         <p>Come and make something we will all regret.</p>
-        <p><a href="https://www.eventbrite.com/e/stupid-shit-no-one-needs-terrible-ideas-hackathon-sf-tickets-16452381516" class="btn btn-primary btn-large">Register &raquo;</a></p>
+        <p><a href="https://www.eventbrite.com/e/stupid-shit-no-one-needs-terrible-ideas-hackathon-sf-tickets-16452381516" class="btn btn-primary btn-large">Register &raquo;</a>
+          <i style="margin-left: 8px">(or just show up)</i></p>
       </div>
 
       <div id="slide-1" class="bcg" style="height: 200px"></div>
@@ -78,7 +78,6 @@
             <p class="lead">Flesh Skeuomorphism</p>
             <p class="lead">Revolutionary Finance</p>
             <p class="lead">Internet Of Things-In-Themselves</p>
-            <p class="lead">Scatological APIs</p>
             <p class="lead">Targetting The "Hikikomori" Space</p>
             <p class="lead">Approaching The Intertwingularity</p>
             <p class="lead">edibleX</p>
@@ -110,8 +109,6 @@
       <section>
         <h2>Other Information</h2>
         <p>Please feel free to contact us at <a href="mailto:stupidhackathon@mit.edu">stupidhackathon@mit.edu</a> with any questions or comments.</p>
-        <p>Be inspired, as we were, by the god-awful creations at the <a href="http://www.stupidhackathon.com/">original (NYC) Stupid Hackathon</a>.</p>
-        <p>We have a <a href="https://www.facebook.com/events/1567576990198712/">Facebook group</a>!</p>
         <p>Noisebridge's <a href="https://www.noisebridge.net/wiki/Anti-harassment_policy">
         anti-harassment policy</a> will, of course, be in full effect for the duration of the hackathon.
         Noisebridge's listing of <a
@@ -121,31 +118,7 @@
 
       <div id="slide-3" class="bcg" style="height: 200px"></div>
 
-      <section><pre style="border: none; background: white;" class="pull-right">
- ___________________________________________________
-(  _______________________________________________  )
-( /                                               \ )
-( |  _/_ /                      _/_             / | )
-( |  /  /_  o _     o _     _   /  . . _   o __/  | )
-( | <__/ /_<_/_)_  <_/_)_  /_)_<__(_/_/_)_<_(_/_  | )
-( |                                  /            | )
-( \                                 '             / )
-(  -----------------------------------------------  )
-(         \   ^__^                                  )
-(          \  (oo)\_______                          )
-(             (__)\       )\/\                      )
-(                 ||----w |                         )
-(                 ||     ||                         )
- ---------------------------------------------------
-        o   ^__^
-         o  (oo)\_______
-            (__)\       )\/\
-                ||----w |
-                ||     ||
-      </pre></section>
 
-      <a href="https://github.com/stupidhackathon/stupidhackathon.github.io"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
-      <a href="https://github.com/stupidhackathon/stupidhackathon.github.io"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/8b6b8ccc6da3aa5722903da7b58eb5ab1081adee/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png"></a>
     </div> <!-- /container -->
   </body>
 </html>
