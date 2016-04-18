@@ -13,7 +13,7 @@ a {
 
 /* layout */
 html {
-  background: url(images/artisanal_wood.jpg) fixed; }
+  background: url(images/artisanal_wood.jpg); }
 
 body {
   padding: 0;
@@ -44,10 +44,16 @@ img.inline {
   .section.light {
     background-color: rgba(255, 255, 255, 0.25); }
 
-.delaunay {
+.slide {
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
+  -moz-box-shadow: inset rgba(0, 0, 0, 0.7) 0 0 8px 1px;
+  -webkit-box-shadow: inset rgba(0, 0, 0, 0.7) 0 0 8px 1px;
+  -o-box-shadow: inset rgba(0, 0, 0, 0.7) 0 0 8px 1px;
+  box-shadow: inset rgba(0, 0, 0, 0.7) 0 0 8px 1px; }
+
+.delaunay {
   background-image: url("images/delaunay_green.png");
   color: #555;
   text-shadow: 1px 1px rgba(255, 255, 255, 0.8); }

@@ -13,7 +13,7 @@ a
 /* layout */
 
 html
-  background: url(images/artisanal_wood.jpg) fixed 
+  background: url(images/artisanal_wood.jpg)
 
 body
   padding: 0
@@ -45,8 +45,11 @@ img.inline
   &.light
     background-color: rgba(256, 256, 256, 0.25)
 
-.delaunay
+.slide
   +bg-fix
+  +inset-box-shadow(rgba(0,0,0,0.7), 8px, $spread:1px)
+
+.delaunay
   background-image: url('images/delaunay_green.png')
   color: #555
   +letterpress
