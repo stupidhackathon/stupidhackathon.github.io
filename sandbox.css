@@ -1,0 +1,47 @@
+h2 {
+  font-size: 30px; }
+
+a {
+  text-decoration: none;
+  color: #f15050;
+  transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  -webkit-transition: color 0.2s;
+  -o-transition: color 0.2s; }
+  a:hover {
+    color: #ffb4b4; }
+
+/* layout */
+html {
+  background: url(images/artisanal_wood.jpg) fixed; }
+
+body {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  color: #fff; }
+
+.cursive {
+  font-family: "Lobster", cursive; }
+
+.caps {
+  text-transform: uppercase; }
+
+img.inline {
+  height: 1.2em;
+  vertical-align: text-bottom; }
+
+.logo {
+  margin: 0 auto;
+  width: 400px; }
+
+.section {
+  padding: 2em 10vw; }
+  .section.dark {
+    background-color: rgba(30, 30, 30, 0.9); }
+  .section.light {
+    background-color: rgba(255, 255, 255, 0.25); }
+
+/*# sourceMappingURL=sandbox.css.map */
