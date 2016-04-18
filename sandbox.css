@@ -44,4 +44,16 @@ img.inline {
   .section.light {
     background-color: rgba(255, 255, 255, 0.25); }
 
+.delaunay {
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url("images/delaunay_green.png");
+  color: #555;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.8); }
+  .delaunay a {
+    color: #555; }
+    .delaunay a:hover {
+      color: #000; }
+
 /*# sourceMappingURL=sandbox.css.map */

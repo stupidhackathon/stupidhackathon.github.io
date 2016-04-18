@@ -3,3 +3,62 @@
   -moz-transition: #{$prop}
   -webkit-transition: #{$prop}
   -o-transition: #{$prop}
+
+=bg-fix
+  background-position: center center
+  background-attachment: fixed
+  background-size: cover
+
+=box-shadow($color, $blur, $spread:0, $x:0, $y:0)
+  -moz-box-shadow:    $color $x $y $blur $spread
+  -webkit-box-shadow: $color $x $y $blur $spread
+  -o-box-shadow:      $color $x $y $blur $spread
+  box-shadow:         $color $x $y $blur $spread
+
+=inset-box-shadow($color, $blur, $spread:0, $x:0, $y:0)
+  -moz-box-shadow:    inset $color $x $y $blur $spread
+  -webkit-box-shadow: inset $color $x $y $blur $spread
+  -o-box-shadow:      inset $color $x $y $blur $spread
+  box-shadow:         inset $color $x $y $blur $spread
+
+=letterpress
+  text-shadow: 1px 1px rgba(255,255,255,0.8)
+=boxpress
+  +inset-box-shadow(rgba(0,0,0,0.3), 1px, 0, 1px, 1px)
+
+=border-radius($r)
+  -webkit-border-radius: $r
+  -moz-border-radius: $r
+  border-radius: $r
+
+=text-bg($url)
+  background: url($url)
+  background-clip: text
+  -webkit-background-clip: text
+  -moz-background-clip: text
+  text-fill-color: transparent
+  -webkit-text-fill-color: transparent
+  -moz-text-fill-color: transparent
+
+=un-text-bg($color)
+  background: none
+  background-clip: none
+  -webkit-background-clip: none
+  -moz-background-clip: none
+  text-fill-color: $color
+  -webkit-text-fill-color: $color
+  -moz-text-fill-color: $color
+  color: $color
+
+=border-box
+  box-sizing: border-box
+  -ms-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+
+=unselectable
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  -o-user-select: none
+  user-select: none
