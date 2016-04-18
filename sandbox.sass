@@ -5,15 +5,20 @@ h2
 
 a
   text-decoration: none
-  color: #f15050
+  color: #63fbb7
   +transition(color 0.2s)
   &:hover
-    color: #ffb4b4
+    color: #b9f4d9
 
 /* layout */
 
 html
   background: url(images/artisanal_wood.jpg)
+
+::selection
+  background: #ff63be
+::-moz-selection
+  background: #ff63be
 
 body
   padding: 0
@@ -51,9 +56,23 @@ img.inline
 
 .delaunay
   background-image: url('images/delaunay_green.png')
-  color: #555
+  color: #444
   +letterpress
   a
-    color: #555
+    color: #444
     &:hover
       color: #000
+
+table.program
+  width: 500px
+  margin: 0 auto
+  position: relative
+  td
+    vertical-align: text-top
+    padding: 0.2em 0.3em
+  td:nth-child(1)
+    text-align: right
+    width: 40%
+    font-weight: bold
+  td:nth-child(2)
+    text-align: left

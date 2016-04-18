@@ -3,17 +3,23 @@ h2 {
 
 a {
   text-decoration: none;
-  color: #f15050;
+  color: #63fbb7;
   transition: color 0.2s;
   -moz-transition: color 0.2s;
   -webkit-transition: color 0.2s;
   -o-transition: color 0.2s; }
   a:hover {
-    color: #ffb4b4; }
+    color: #b9f4d9; }
 
 /* layout */
 html {
   background: url(images/artisanal_wood.jpg); }
+
+::selection {
+  background: #ff63be; }
+
+::-moz-selection {
+  background: #ff63be; }
 
 body {
   padding: 0;
@@ -55,11 +61,25 @@ img.inline {
 
 .delaunay {
   background-image: url("images/delaunay_green.png");
-  color: #555;
+  color: #444;
   text-shadow: 1px 1px rgba(255, 255, 255, 0.8); }
   .delaunay a {
-    color: #555; }
+    color: #444; }
     .delaunay a:hover {
       color: #000; }
+
+table.program {
+  width: 500px;
+  margin: 0 auto;
+  position: relative; }
+  table.program td {
+    vertical-align: text-top;
+    padding: 0.2em 0.3em; }
+  table.program td:nth-child(1) {
+    text-align: right;
+    width: 40%;
+    font-weight: bold; }
+  table.program td:nth-child(2) {
+    text-align: left; }
 
 /*# sourceMappingURL=sandbox.css.map */
