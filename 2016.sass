@@ -45,11 +45,15 @@ img.inline
   width: 400px
 
 .section
-  padding: 2em 10vw 3em 10vw
+  padding: 2em 10vw
+  &:not(:last-child)
+    padding-bottom: 3em
   &.dark
     background-color: rgba(30,30,30,0.9)
   &.light
     background-color: rgba(256, 256, 256, 0.25)
+  &.narrow
+    padding: 1em
 
 .colorlinks
   a
@@ -61,14 +65,21 @@ img.inline
   +bg-fix
   +inset-box-shadow(rgba(0,0,0,0.7), 8px, $spread:1px)
 
-.delaunay
-  background-image: url('images/delaunay_green.png')
+=dark-text
   color: #444
   +letterpress
   a
     color: #444
     &:hover
       color: #000
+
+.dark-text
+  +dark-text
+
+.delaunay
+  background-image: url('images/delaunay_green.png')
+  +dark-text
+
 
 table.program
   width: 500px
@@ -84,5 +95,5 @@ table.program
   td:nth-child(2)
     text-align: left
 
-span.separated
+.separated
   margin: 0 1em

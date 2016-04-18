@@ -45,11 +45,15 @@ img.inline {
   width: 400px; }
 
 .section {
-  padding: 2em 10vw 3em 10vw; }
+  padding: 2em 10vw; }
+  .section:not(:last-child) {
+    padding-bottom: 3em; }
   .section.dark {
     background-color: rgba(30, 30, 30, 0.9); }
   .section.light {
     background-color: rgba(255, 255, 255, 0.25); }
+  .section.narrow {
+    padding: 1em; }
 
 .colorlinks a {
   color: #ff4b4b; }
@@ -64,6 +68,14 @@ img.inline {
   -webkit-box-shadow: inset rgba(0, 0, 0, 0.7) 0 0 8px 1px;
   -o-box-shadow: inset rgba(0, 0, 0, 0.7) 0 0 8px 1px;
   box-shadow: inset rgba(0, 0, 0, 0.7) 0 0 8px 1px; }
+
+.dark-text {
+  color: #444;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.8); }
+  .dark-text a {
+    color: #444; }
+    .dark-text a:hover {
+      color: #000; }
 
 .delaunay {
   background-image: url("images/delaunay_green.png");
@@ -88,7 +100,7 @@ table.program {
   table.program td:nth-child(2) {
     text-align: left; }
 
-span.separated {
+.separated {
   margin: 0 1em; }
 
 /*# sourceMappingURL=2016.css.map */
