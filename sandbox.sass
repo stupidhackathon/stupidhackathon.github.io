@@ -5,10 +5,8 @@ h2
 
 a
   text-decoration: none
-  color: #63fbb7
+  color: #fff
   +transition(color 0.2s)
-  &:hover
-    color: #b9f4d9
 
 /* layout */
 
@@ -44,11 +42,17 @@ img.inline
   width: 400px
 
 .section
-  padding: 2em 10vw
+  padding: 2em 10vw 3em 10vw
   &.dark
     background-color: rgba(30,30,30,0.9)
   &.light
     background-color: rgba(256, 256, 256, 0.25)
+
+.colorlinks
+  a
+    color: #ff4b4b
+    &:hover
+      color: #ff6464
 
 .slide
   +bg-fix
@@ -76,3 +80,6 @@ table.program
     font-weight: bold
   td:nth-child(2)
     text-align: left
+
+span.separated
+  margin: 0 1em
