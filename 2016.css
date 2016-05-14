@@ -30,6 +30,9 @@ body {
   font-size: 20px;
   color: #fff; }
 
+h2:not(:first-child) {
+  margin-top: 1.5em; }
+
 .cursive {
   font-family: "League Script", cursive; }
 
@@ -53,8 +56,7 @@ img.inline {
   .section.light {
     background-color: rgba(255, 255, 255, 0.25); }
   .section.narrow {
-    padding: 0.5em;
-    font-size: 20px; }
+    padding: 1em; }
 
 .colorlinks a {
   color: #ff4b4b; }
