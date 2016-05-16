@@ -1,0 +1,186 @@
+<html>
+<head>
+<title>Canvas test</title>
+
+<script>
+
+var ph1 = 0;
+var ph2 = 0;
+var ph3 = 0;
+var phr = 0;
+
+var speed1 = 0;
+var speed2 = 0;
+var speed3 = 0;
+
+var mode = 0;
+
+var mouth = new Image();
+
+var global_y_pos = 400;
+var global_y_speed = 0;
+
+var t = 0;
+
+function init() {
+	window.requestAnimationFrame(draw);
+	var ctx = canvas.getContext('2d');
+	ctx.translate(400,400);
+
+	mouth.src = 'http://freepngimages.com/wp-content/uploads/2015/06/mouth.png';
+}
+
+function spin() {
+	mode = 1;
+	// global_y_pos = 400;
+	//  var c = document.getElementById("canvas");
+ //    var ctx = c.getContext("2d");
+ //    ctx.restore();
+}
+
+function drawArrow(fromx, fromy, tox, toy){
+    //variables to be used when creating the arrow
+    var c = document.getElementById("canvas");
+    var ctx = c.getContext("2d");
+    var headlen = 10;
+
+    var angle = Math.atan2(toy-fromy,tox-fromx);
+
+    //starting path of the arrow from the start square to the end square and drawing the stroke
+    ctx.beginPath();
+    ctx.moveTo(fromx, fromy);
+    ctx.lineTo(tox, toy);
+    ctx.strokeStyle = "#000000";
+    ctx.lineWidth = 22;
+    ctx.stroke();
+
+    //starting a new path from the head of the arrow to one of the sides of the point
+    ctx.beginPath();
+    ctx.moveTo(tox, toy);
+    ctx.lineTo(tox-headlen*Math.cos(angle-Math.PI/7),toy-headlen*Math.sin(angle-Math.PI/7));
+
+    //path from the side point of the arrow, to the other side point
+    ctx.lineTo(tox-headlen*Math.cos(angle+Math.PI/7),toy-headlen*Math.sin(angle+Math.PI/7));
+
+    //path from the side point back to the tip of the arrow, and then again to the opposite side point
+    ctx.lineTo(tox, toy);
+    ctx.lineTo(tox-headlen*Math.cos(angle-Math.PI/7),toy-headlen*Math.sin(angle-Math.PI/7));
+
+    //draws the paths created above
+    ctx.strokeStyle = "#000000";
+    ctx.lineWidth = 22;
+    ctx.stroke();
+    ctx.fillStyle = "#000000";
+    ctx.fill();
+}
+
+function draw() {
+
+	t = t + 0.001;
+
+	if (mode === 1) {
+		speed1 = speed1 + 0.03;
+		speed2 = speed2 - 0.035;
+		speed3 = speed3 + 0.001;
+
+		if (speed1 > 0.2) {
+			mode = 2;
+		}
+	} else if (mode === 2) {
+		speed1 = speed1 * 0.97;
+		speed2 = speed2 * 0.94;
+		speed3 = speed3 * 0.9;
+
+		if (speed1 < 0.001) {
+			mode = 0;
+			speed2 = 0;
+			// speed2 = 0;
+		}
+	}
+
+	ph1 = ph1 + speed1;
+	ph2 = ph2 + speed2;
+	ph3 = ph3 + speed3;
+
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext) {
+    var ctx = canvas.getContext('2d');
+
+    // ctx.translate(0,-global_y_pos)
+
+    // global_y_speed = global_y_speed + 0.1;
+    // global_y_pos = global_y_pos + global_y_speed;
+
+    // ctx.translate(0,global_y_pos);
+
+    // if (global_y_pos > 520) {
+    // 	global_y_speed = global_y_speed * -0.9;
+    // }
+
+
+	ctx.clearRect(-canvas.width, -canvas.height, 2*canvas.width, 2*canvas.height);
+
+
+
+    var cx = 0;
+    var cy = 0;
+    var r = 300 + 15*Math.sin(phr);
+    phr = phr + 0.05;
+
+
+    ctx.font = "36px serif";
+
+    ctx.strokeStyle="#FFFFFF";
+    ctx.lineWidth = 2;
+
+    for (var i = 0; i < 8; i++) {
+    	ctx.beginPath();
+    	ctx.moveTo(cx, cy);
+    	ctx.arc(cx, cy, r, 2*Math.PI*(i+ph2)/8, 2*Math.PI*(i+ph2+1)/8);
+    	ctx.moveTo(cx, cy);
+    	ctx.stroke();
+
+
+    	ctx.fillStyle = "rgb("+
+		  Math.floor(Math.random()*200)+","+
+		  Math.floor(Math.random()*208)+","+
+		  Math.floor(Math.random()*128)+")";
+    	ctx.fill();
+    }
+
+    ctx.strokeStyle = "#FFFFFF"
+
+    ctx.rotate(Math.PI*2*(i+0.6 + ph1)/8)
+
+    ctx.drawImage(mouth, -100 + Math.sin(phr)*15, 75 + Math.cos(phr)*15, 200, 200)
+
+    ctx.rotate(-Math.PI*2*(i+0.6 + ph1)/8)
+
+    for (i = 0; i < 8; i++) {
+    	ctx.rotate(Math.PI*2*(i+0.6 + ph1)/8)
+
+    	if (i === 0) {
+    		ctx.strokeText("Winner?", 80, 15);
+    	} else {
+    		ctx.strokeText("Not a Winner", 80, 15);
+    	}
+
+    	ctx.rotate(-Math.PI*2*(i+0.6 + ph1)/8)
+    }
+  }
+
+  drawArrow(0, 0, r * (1 + 40*speed3) * Math.cos(Math.PI*2*ph3), r * (1 + 40*speed3) * Math.sin(Math.PI*2*ph3));
+
+  window.requestAnimationFrame(draw);
+}
+</script>
+
+</head>
+<body onload="init();">
+
+<canvas id="canvas" width="800" height="800"></canvas>
+
+<button onclick="spin();">Spin!</button>
+
+</body>
+</html>
