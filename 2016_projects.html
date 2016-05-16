@@ -20,6 +20,10 @@
       .team {
         font-size: 14px;
       }
+      .project {
+        margin-bottom: 2em;
+        min-height: 400px;
+      }
     </style>
 
     <script type="text/javascript" src="lib/angular.min.js"></script>
@@ -28,6 +32,7 @@
 var app = angular.module('MyApp', ['ngSanitize']);
 app.controller('MyCtrl', function($scope, $http, $sce) {
 
+  // To regenerate this file, `python submissions.py`
   $http.get('submissions.json').then(function(response) {
     $scope.projects = response.data;
   });
