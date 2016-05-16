@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en"
+      ng-app="MyApp"
+      ng-controller="MyCtrl">
+  <head>
+
+    <title>The San Francisco Stupid Shit No One Needs and Terrible Ideas Hackathon - 2016 Projects</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=League+Script' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-grid-only.css" />
+
+    <link href='2016.css' rel='stylesheet' />
+    <style>
+      .title {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      .team {
+        font-size: 14px;
+      }
+    </style>
+
+    <script type="text/javascript" src="lib/angular.min.js"></script>
+    <script type="text/javascript" src="lib/angular-sanitize.js"></script>
+    <script type="text/javascript">
+var app = angular.module('MyApp', ['ngSanitize']);
+app.controller('MyCtrl', function($scope, $http, $sce) {
+
+  $http.get('submissions.json').then(function(response) {
+    $scope.projects = response.data;
+  });
+
+});
+app.filter('unsafe', function($sce) { return $sce.trustAsHtml; });
+    </script>
+
+  </head>
+  <body>
+
+    <div class="section narrow dark">
+      <p><a href="/"><i class="fa fa-arrow-left"></i> BACK TO THE STUPID HACKATHON WEBSITE</a></p>
+      THE SAN FRANCISCO STUPID SHIT NO ONE NEEDS AND TERRIBLE IDEAS "HACKATHON" ACTUALLY HAPPENED!<br/>HERE ARE SOME THINGS PEOPLE MADE AT IT
+    </div>
+
+    <div class="section">
+
+      <div ng-repeat="project in projects"
+           class="project col-xs-12 col-sm-4">
+        <div class="title" ng-bind-html="project.title | unsafe"></div>
+        <div class="team" ng-bind-html="project.team | unsafe"></div>
+        <p ng-bind-html="project.description | unsafe"></p>
+      </div>
+
+    </div>
+
+  </body>
+</html>
