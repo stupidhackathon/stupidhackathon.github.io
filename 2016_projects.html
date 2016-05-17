@@ -24,6 +24,10 @@
         margin-bottom: 2em;
         min-height: 400px;
       }
+
+      a {
+        text-decoration: underline;
+      }
     </style>
 
     <script type="text/javascript" src="lib/angular.min.js"></script>
@@ -53,7 +57,13 @@ app.filter('unsafe', function($sce) { return $sce.trustAsHtml; });
 
       <div ng-repeat="project in projects"
            class="project col-xs-12 col-sm-4">
-        <div class="title" ng-bind-html="project.title | unsafe"></div>
+        <div class="title">
+          <a ng-if="project.link" href="{{project.link}}">
+            <span ng-bind-html="project.title | unsafe"></span>
+          </a>
+          <span ng-if="!project.link"
+                ng-bind-html="project.title | unsafe"></span>
+        </div>
         <div class="team" ng-bind-html="project.team | unsafe"></div>
         <p ng-bind-html="project.description | unsafe"></p>
       </div>
