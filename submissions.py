@@ -30,7 +30,6 @@ with open('submissions.json', 'w') as out:
   # Transform some cols
   rows = []
   for row in reader:
-    print row
     if row.get('video_start'):
       row['video_start'] = youtube_time_to_seconds(row['video_start'])
     if row.get('video_end'):
