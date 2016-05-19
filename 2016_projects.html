@@ -30,6 +30,7 @@
       }
     </style>
 
+    <script type="text/javascript" src="lib/underscore.min.js"></script>
     <script type="text/javascript" src="lib/angular.min.js"></script>
     <script type="text/javascript" src="lib/angular-sanitize.js"></script>
     <script type="text/javascript">
@@ -40,6 +41,14 @@ app.controller('MyCtrl', function($scope, $http, $sce) {
   $http.get('submissions.json').then(function(response) {
     $scope.projects = response.data;
   });
+
+  $scope.getVideoUrl = function(project) {
+    return $sce.trustAsResourceUrl(
+      _.template(
+        "https://www.youtube.com/embed/k4Ec5_DQTnA?start=<%= video_start %>&end=<%= video_end %>"
+      )(project)
+    );
+  };
 
 });
 app.filter('unsafe', function($sce) { return $sce.trustAsHtml; });
@@ -56,7 +65,7 @@ app.filter('unsafe', function($sce) { return $sce.trustAsHtml; });
     <div class="section">
 
       <div ng-repeat="project in projects"
-           class="project col-xs-12 col-sm-4">
+           class="project col-xs-12 col-lg-6">
         <div class="title">
           <a ng-if="project.link" href="{{project.link}}">
             <span ng-bind-html="project.title | unsafe"></span>
@@ -66,6 +75,12 @@ app.filter('unsafe', function($sce) { return $sce.trustAsHtml; });
         </div>
         <div class="team" ng-bind-html="project.team | unsafe"></div>
         <p ng-bind-html="project.description | unsafe"></p>
+        <p ng-if="project.video_start && project.video_end">
+          <iframe width="420" height="236"
+                  src="{{getVideoUrl(project)}}"
+                  frameborder="0" allowfullscreen></iframe>
+        </p>
+
       </div>
 
     </div>
