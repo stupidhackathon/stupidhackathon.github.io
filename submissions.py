@@ -7,7 +7,7 @@ def youtube_time_to_seconds(time_str):
   """Transform format HH:MM:SS to seconds"""
   if not time_str:
     return None
-  time = [int(s) for s in time_str.split(':')]
+  time = [int(s) for s in time_str.strip().split(':')]
   time.reverse()
   if len(time) > 3:
     raise Exception('Cannot parse time with greater units than hours: %s',
