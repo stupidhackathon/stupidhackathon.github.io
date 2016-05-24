@@ -44,6 +44,8 @@ app.controller('MyCtrl', function($scope, $http, $sce) {
 
   $scope.getVideoUrl = function(project) {
     return $sce.trustAsResourceUrl(
+      project.override_youtube ?
+      "https://www.youtube.com/embed/" + project.override_youtube :
       _.template(
         "https://www.youtube.com/embed/k4Ec5_DQTnA?start=<%= video_start %>&end=<%= video_end %>"
       )(project)
