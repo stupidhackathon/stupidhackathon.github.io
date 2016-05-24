@@ -5,7 +5,7 @@ h2 {
   font-size: 30px; }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
   color: #fff;
   transition: color 0.2s;
   -moz-transition: color 0.2s;
@@ -59,6 +59,7 @@ img.inline {
     padding: 1em; }
 
 .colorlinks a {
+  text-decoration: none;
   color: #ff4b4b; }
   .colorlinks a:hover {
     color: #ff6464; }
