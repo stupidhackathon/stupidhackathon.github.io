@@ -1,10 +1,29 @@
-html, body {
-    
+html{
+    background-color: rgb(255,0,0,0.2);
+    color: rgb(255,0,0,0.5);
 }
 
 h1, h2, h3, p {
     max-width: 540px;
     font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+    text-transform: lowercase;
+}
+
+h2, h3 {
+    font-weight: 100;
+    line-height: 1.8em;
+}
+
+input {
+    border-radius: 8px;
+    border:  none;
+    padding: 8px;
+    margin: 4px;
+    font-size: 16px;
+
 }
 
 .section {
