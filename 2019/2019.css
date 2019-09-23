@@ -1,3 +1,7 @@
+@font-face {
+    font-family: Impact;
+    src: url(../2019/assets/Impact.ttf); }
+
 html{
     /* background-color: rgb(255,0,0,0.2); */
     color: black;
@@ -21,6 +25,11 @@ h2, h3 {
 
 h1 {
     font-size: 44px;
+    font-family: Impact;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 4px;
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
 }
 
 h2 {
