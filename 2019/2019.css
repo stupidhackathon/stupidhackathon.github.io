@@ -91,6 +91,10 @@ button:hover {
     display: flex;
 }
 
+.section-prizes {
+    height: 100%;
+}
+
 .section-item {
     height: 100%;
     display: flex;
