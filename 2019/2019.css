@@ -53,7 +53,7 @@ a {
 }
 
 a:hover {
-    color: blue;
+    color: pink;
 }
 
 input, button {
@@ -78,8 +78,10 @@ input, button {
 }
 
 button:hover {
-   background-color: blue;
+   background-color: pink;
    color: white;
+   border: white;
+   color: hotpink;
 }
 
 
@@ -87,6 +89,10 @@ button:hover {
     height: 640px;
     /* background-color: rgba(0,0,0,0.3); */
     display: flex;
+}
+
+.section-prizes {
+    height: 100%;
 }
 
 .section-item {
@@ -120,8 +126,8 @@ img {
 .img-meme {
     margin-top: 0px;
     position: absolute;
-    height: 180px;
-    width: 40%;
+    height: 300px;
+    width: 300px;
     
 }
 
@@ -165,6 +171,13 @@ img {
     width: 32px;
     padding-left: 20px;
     padding-right: 8px;
+}
+
+.img-profile {
+    height:200px;
+    width: 200px;
+    border-radius: 300px;
+    object-fit: cover;
 }
 
 footer {
